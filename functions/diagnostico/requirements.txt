@@ -1,0 +1,8 @@
+# Dependencias Python para la Lambda de Diagnóstico
+# --------------------------------------------------
+# boto3: librería oficial de AWS para Python.
+# En Lambda ya viene pre-instalada, pero la listamos
+# para que el Dockerfile la instale con la versión exacta.
+# --------------------------------------------------
+
+boto3==1.35.0

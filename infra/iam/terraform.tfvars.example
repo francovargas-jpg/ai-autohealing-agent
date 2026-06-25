@@ -1,0 +1,14 @@
+# =============================================================
+# Ejemplo de valores para las variables
+# =============================================================
+# Copiá este archivo como "terraform.tfvars" y completá con
+# los valores reales de tu cuenta AWS.
+#
+# IMPORTANTE: nunca subas terraform.tfvars a GitHub si tiene
+# datos sensibles. Ya está en el .gitignore.
+# =============================================================
+
+aws_region       = "us-east-1"
+aws_account_id   = "123456789012"   # Reemplazar con tu account ID real
+project_name     = "autohealing-agent"
+eks_cluster_name = "autohealing-cluster"
