@@ -32,3 +32,36 @@ output "node_group_name" {
   description = "Nombre del node group (lo va a necesitar Miguel para el agente de acción, tarea 3.4)"
   value       = module.eks.eks_managed_node_groups["main"].node_group_id
 }
+
+
+# --- Outputs de IAM (Juli, tarea 2.3) ---
+
+output "lambda_trigger_role_arn" {
+  description = "ARN del rol para la Lambda trigger"
+  value       = aws_iam_role.lambda_trigger.arn
+}
+
+output "lambda_diagnostico_role_arn" {
+  description = "ARN del rol para la Lambda de diagnóstico"
+  value       = aws_iam_role.lambda_diagnostico.arn
+}
+
+output "lambda_accion_role_arn" {
+  description = "ARN del rol para la Lambda de acción"
+  value       = aws_iam_role.lambda_accion.arn
+}
+
+output "lambda_notificacion_role_arn" {
+  description = "ARN del rol para la Lambda de notificación"
+  value       = aws_iam_role.lambda_notificacion.arn
+}
+
+output "step_functions_role_arn" {
+  description = "ARN del rol para Step Functions"
+  value       = aws_iam_role.step_functions.arn
+}
+
+output "eventbridge_role_arn" {
+  description = "ARN del rol para EventBridge"
+  value       = aws_iam_role.eventbridge.arn
+}
