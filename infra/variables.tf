@@ -39,3 +39,17 @@ variable "node_max_size" {
   type        = number
   default     = 3
 }
+
+
+# --- Variables para IAM (Juli, tarea 2.3) ---
+
+variable "aws_account_id" {
+  description = "ID de la cuenta AWS (número de 12 dígitos)"
+  type        = string
+}
+
+variable "project_name" {
+  description = "Nombre del proyecto, se usa como prefijo en los recursos"
+  type        = string
+  default     = "autohealing-agent"
+}
