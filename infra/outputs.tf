@@ -65,3 +65,9 @@ output "eventbridge_role_arn" {
   description = "ARN del rol para EventBridge"
   value       = aws_iam_role.eventbridge.arn
 }
+
+
+output "ecr_repository_urls" {
+  description = "URLs de los repos ECR por agente (las usa Jenkins en la fase 4)"
+  value       = { for k, r in aws_ecr_repository.agentes : k => r.repository_url }
+}
